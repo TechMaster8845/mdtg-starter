@@ -1,8 +1,8 @@
 # MDTG Starter Project  
 MultiDimensional Tree Graph Engine (C++20)
 
-O **MDTG (MultiDimensional Tree Graph)** é um engine moderno em C++20 projetado para servir como  
-estrutura de dados central de pipelines complexos, como:
+O MDTG (MultiDimensional Tree Graph) é um engine moderno em C++20 projetado para servir como 
+estrutura de dados central em pipelines complexos, incluindo:
 
 - Compiladores IFC/BIM  
 - Motores de análise geométrica  
@@ -10,35 +10,29 @@ estrutura de dados central de pipelines complexos, como:
 - Processamento massivo de grafos hierárquicos  
 - Sistemas paralelos baseados em árvores multidimensionais  
 
-Este repositório contém a **base mínima**, limpa e reutilizável, para iniciar qualquer projeto  
+Este repositório fornece a base mínima, limpa e reutilizável, para iniciar qualquer projeto
 com MDTG integrado.
 
 ---
 
-## 🌐 Arquitetura Geral
+## Arquitetura Geral
 
 O engine é composto por:
 
-- `MDTGNode`  
-- `Matrix4` (transformações 4×4)  
+- MDTGNode  
+- Matrix4 (transformações 4×4)  
 - Sistema básico de propriedades  
-- Motor de propagação determinística top-down  
-- Executor paralelo via `ThreadPool`  
-- Demonstração completa no `main.cpp`
+- Motor determinístico de propagação top-down  
+- Executor paralelo via ThreadPool  
+- Demonstração completa em main.cpp
 
 ### Pipeline
 
-```
-
 AST / Entrada → MDTG Builder → MDTG Tree → Parallel Scheduler → Analyzer → Output
-
-```
 
 ---
 
-## 📦 Estrutura do Projeto
-
-```
+## Estrutura do Projeto
 
 mdtg-starter/
 ├── include/
@@ -53,138 +47,113 @@ mdtg-starter/
 ├── CMakeLists.txt
 └── README.md
 
-````
-
 ---
 
-## ⚙️ Build (Windows / Linux)
+## Build (Windows / Linux)
 
-### 1) Criar diretório de build
+### Criar diretório de build
 
-```bash
 mkdir build
 cd build
-````
 
-### 2) Gerar o projeto via CMake
+### Gerar via CMake
 
-```bash
 cmake ..
-```
 
-### 3) Compilar
+### Compilar
 
-#### Windows (MSVC)
+Windows (MSVC):
 
-```bash
 cmake --build . --config Release
-```
 
-#### Linux / MinGW
+Linux:
 
-```bash
 make -j$(nproc)
-```
 
-### 4) Executar
+### Executar
 
-```bash
 ./Release/mdtg.exe
-```
 
 ---
 
-## 🧩 O que é o MDTGNode?
+## O que é o MDTGNode?
 
-Cada `MDTGNode` representa um nó de uma estrutura hierárquica multidimensional:
+Cada MDTGNode representa um nó de uma estrutura multidimensional contendo:
 
-* Transformação local
-* Transformação global
-* Propriedades locais
-* Propriedades resolvidas (herdadas + sobrescritas)
-* Geometria opcional
-* Filhos
-* Execução paralela determinística
+- Transformação local
+- Transformação global
+- Propriedades locais e herdadas
+- Geometria opcional
+- Filhos hierárquicos
+- Execução paralela determinística
 
-### Exemplo de fluxo interno
+Fluxo interno:
 
-* Propagação de transformações
-* Resolução de propriedades
-* Análise local (CPU-bound)
-* Execução paralela por níveis
+- Propagação de transformações
+- Resolução de propriedades
+- Análise local
+- Execução paralela por níveis
 
 ---
 
-## 🚀 Demonstração inclusa
+## Demonstração
 
-O `main.cpp` monta uma árvore MDTG exemplar, percorre níveis da árvore e executa:
+O main.cpp monta uma árvore MDTG completa e executa:
 
-* `computeGlobalTransform()`
-* `resolveProperties()`
-* `evaluateNode()`
+- computeGlobalTransform()
+- resolveProperties()
+- evaluateNode()
 
-Tudo isso usando **multithreading real**, controlado por barreiras por nível.
+Com multithreading real e barreiras por nível.
 
-Saída esperada:
+Saída:
 
-```
 MDTG Finalizado
-```
 
 ---
 
-## 🔧 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-* **C++20**
-* **CMake**
-* **ThreadPool customizado**
-* Containers seguros (`std::unique_ptr`, mutexes, atomic)
-* Execução paralela determinística por níveis
-
----
-
-## 📘 Próximos Passos (sugestões)
-
-* Integração com IFC Parser → gerar MDTG automaticamente
-* Scheduler baseado em DAG (dependências)
-* Otimizações com Eigen para matrizes
-* Pool de memória customizado
-* Verificador BIM / Verificador geométrico
-* Analisadores plugináveis
+- C++20  
+- CMake  
+- ThreadPool customizado  
+- Smart pointers seguros  
+- Execução paralela determinística  
 
 ---
 
-## 📄 Licença
+## Dual Licensing Model
 
-MIT License (opcional — adicionar se desejar).
-Este projeto é livre para uso acadêmico, comercial e profissional.
-
----
-
-## 👤 Autor
-
-**Fábio Petronilho**
-Desenvolvedor BIM / Engenharia da Computação
-GitHub: [https://github.com/TechMaster8845/mdtg-starter](https://github.com/TechMaster8845/mdtg-starter)
-
-
-
-## Licensing
-
-The MDTG Engine is distributed under a dual license model:
+O MDTG é distribuído sob modelo dual:
 
 ### MIT License (Non-Commercial)
-Permits personal, educational, academic, and non-commercial usage.
+Permite uso pessoal, de pesquisa e educacional.
 
 ### Commercial License
-Required for any commercial, corporate, industrial, or revenue-generating usage.
+Obrigatória para:
 
-The commercial license permits:
-- Integration into proprietary or closed-source products
-- Use inside engineering workflows
-- Use as part of commercial BIM tools and analysis engines
-- Use inside SaaS platforms
-- Internal use within companies
+- Empresas  
+- Softwares BIM/IFC  
+- Produtos proprietários  
+- Servidores ou SaaS  
+- Qualquer uso comercial ou lucrativo  
 
-To obtain a commercial license, contact:
-fabiopetronilho1977@outlook.com
+Benefícios da licença comercial:
+
+- Uso em produtos fechados  
+- Direitos completos de produção  
+- Suporte técnico  
+- Atualizações e compatibilidade  
+
+Para adquirir licença comercial:
+
+E-mail: fabiopetronilho1977@outlook.com  
+WhatsApp: +55 11 99799-8427  
+
+---
+
+## Autor
+
+Fábio Petronilho  
+Desenvolvedor BIM / Engenharia da Computação  
+GitHub: https://github.com/TechMaster8845/mdtg-starter
