@@ -169,3 +169,22 @@ GitHub: [https://github.com/TechMaster8845/mdtg-starter](https://github.com/Tech
 
 
 
+## Licensing
+
+The MDTG Engine is distributed under a dual license model:
+
+### MIT License (Non-Commercial)
+Permits personal, educational, academic, and non-commercial usage.
+
+### Commercial License
+Required for any commercial, corporate, industrial, or revenue-generating usage.
+
+The commercial license permits:
+- Integration into proprietary or closed-source products
+- Use inside engineering workflows
+- Use as part of commercial BIM tools and analysis engines
+- Use inside SaaS platforms
+- Internal use within companies
+
+To obtain a commercial license, contact:
+fabiopetronilho1977@outlook.com
