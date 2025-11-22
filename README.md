@@ -144,18 +144,19 @@ MDTG Finalizado
 
 ---
 
-## 📄 Licença
+## Licença
 
 MIT License 
 Este projeto é livre para uso acadêmico, comercial e profissional.
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Fábio Petronilho**
 Desenvolvedor BIM / Engenharia da Computação
 GitHub: [https://github.com/TechMaster8845/mdtg-starter](https://github.com/TechMaster8845/mdtg-starter)
+
 
 
 
