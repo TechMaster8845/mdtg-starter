@@ -1,0 +1,15 @@
+/build/
+/Release/
+/Debug/
+*.exe
+*.obj
+*.pdb
+*.ipch
+*.ilk
+*.cache
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.sln
+*.vcxproj*
