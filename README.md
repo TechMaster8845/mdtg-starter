@@ -15,7 +15,7 @@ com MDTG integrado.
 
 ---
 
-## 🌐 Arquitetura Geral
+## Arquitetura Geral
 
 O engine é composto por:
 
@@ -36,7 +36,7 @@ AST / Entrada → MDTG Builder → MDTG Tree → Parallel Scheduler → Analyzer
 
 ---
 
-## 📦 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 
@@ -57,7 +57,7 @@ mdtg-starter/
 
 ---
 
-## ⚙️ Build (Windows / Linux)
+## Build (Windows / Linux)
 
 ### 1) Criar diretório de build
 
@@ -94,7 +94,7 @@ make -j$(nproc)
 
 ---
 
-## 🧩 O que é o MDTGNode?
+## O que é o MDTGNode?
 
 Cada `MDTGNode` representa um nó de uma estrutura hierárquica multidimensional:
 
@@ -115,7 +115,7 @@ Cada `MDTGNode` representa um nó de uma estrutura hierárquica multidimensional
 
 ---
 
-## 🚀 Demonstração inclusa
+## Demonstração inclusa
 
 O `main.cpp` monta uma árvore MDTG exemplar, percorre níveis da árvore e executa:
 
@@ -133,7 +133,7 @@ MDTG Finalizado
 
 ---
 
-## 🔧 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **C++20**
 * **CMake**
@@ -141,22 +141,12 @@ MDTG Finalizado
 * Containers seguros (`std::unique_ptr`, mutexes, atomic)
 * Execução paralela determinística por níveis
 
----
-
-## 📘 Próximos Passos (sugestões)
-
-* Integração com IFC Parser → gerar MDTG automaticamente
-* Scheduler baseado em DAG (dependências)
-* Otimizações com Eigen para matrizes
-* Pool de memória customizado
-* Verificador BIM / Verificador geométrico
-* Analisadores plugináveis
 
 ---
 
 ## 📄 Licença
 
-MIT License (opcional — adicionar se desejar).
+MIT License 
 Este projeto é livre para uso acadêmico, comercial e profissional.
 
 ---
@@ -166,6 +156,7 @@ Este projeto é livre para uso acadêmico, comercial e profissional.
 **Fábio Petronilho**
 Desenvolvedor BIM / Engenharia da Computação
 GitHub: [https://github.com/TechMaster8845/mdtg-starter](https://github.com/TechMaster8845/mdtg-starter)
+
 
 
 
