@@ -5,9 +5,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(mdtg
     src/main.cpp
+    src/benchmarks/benchmark_runner.hpp
+    src/benchmarks/benchmark_wide.cpp
+    src/benchmarks/benchmark_deep.cpp
+    src/benchmarks/benchmark_parallel.cpp
     src/mdtg_node.cpp
     src/thread_pool.cpp
 )
+
 
 target_include_directories(mdtg PRIVATE ${CMAKE_SOURCE_DIR}/include)
 

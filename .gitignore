@@ -1,15 +1,23 @@
+# Build artifacts
 /build/
 /Release/
 /Debug/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+
+# Editor
+.vscode/
+
+# Executables / results
 *.exe
 *.obj
 *.pdb
-*.ipch
-*.ilk
-*.cache
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-*.sln
-*.vcxproj*
+results.csv
+results.json
+
+# OS
+Thumbs.db
+.DS_Store
